@@ -33,7 +33,7 @@ lxml is a parsing tool that, in conjunction with the requests module, allows us 
 
 Here's a visual representation marked with a # "1".
 
-<img width="890" alt="Screenshot 2023-01-23 at 6 46 38 PM" src="https://user-images.githubusercontent.com/107063397/214188598-87bce61b-8025-4de2-8476-89b153313691.png">
+<img width="400" alt="Screenshot 2023-01-23 at 6 46 38 PM" src="https://user-images.githubusercontent.com/107063397/214188598-87bce61b-8025-4de2-8476-89b153313691.png">
 
 The next step is to gather information from specific books. In order to do that, we have to navigate to the individual book pages. Shown previously with the number "2". 
 
@@ -58,8 +58,8 @@ Here, the "genre_page" worker checks if there is a next page, and if so, calls f
 
 Finally, the "book_page" worker collects all of the desired data from the book page's URL and then stores that data into an postgreSQL table.
 
-This is a visual demonstration of the "book worker's" job. 
-<img width="680" alt="Screenshot 2023-01-23 at 6 55 50 PM" src="https://user-images.githubusercontent.com/107063397/214191115-f994f5a8-4f54-4fab-9f96-686023eae4f8.png">
+This is a visual demonstration of the "book worker's" data: 
+<img width="300" alt="Screenshot 2023-01-23 at 6 55 50 PM" src="https://user-images.githubusercontent.com/107063397/214191115-f994f5a8-4f54-4fab-9f96-686023eae4f8.png">
 
 
 
