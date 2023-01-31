@@ -1,6 +1,14 @@
 # webScraper
 Using HTTP requests, Xpaths, and xlml python module to return HTML elements in ways we can extract data from a webpage. We are using these tools to search through a book catalogue website.
 
+<img width="467" alt="Screenshot 2023-01-30 at 4 57 13 PM" src="https://user-images.githubusercontent.com/107063397/215615364-d109a7c8-f845-463d-b666-643f2a8b4de2.png">
+
+We are going to be storing info in JSON files, so we import that library. 
+
+Sxpath is our lab's custom method for xpath's that bypasses smart strings to ensure to prevent memory leaks.
+
+RabbitPSQLMixin is a class that helps us create objects in order to transfer messages to RabbitMQ as well as PostgreSQL.
+
 lxml is a parsing tool that, in conjunction with the requests module, allows us to collect specific data from webpages. In this example, I am selecting the list of genre's from the left side of the main page, and I am collecting the url from each hyperlink. I can then use those hyperlinks to traverse through the links in order by using a loop. 
 
 Here's a visual representation marked with a # "1".
@@ -10,7 +18,7 @@ Here's a visual representation marked with a # "1".
 
 And here's the code corresponding:
 
-Here is colleging all of the HTML from the page.
+Here is collecting all of the HTML from the page.
 
 <img width="591" alt="Screenshot 2023-01-23 at 6 49 41 PM" src="https://user-images.githubusercontent.com/107063397/214189500-62633552-8b16-4216-b8aa-509969844452.png">
 
