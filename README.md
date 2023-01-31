@@ -8,13 +8,26 @@ We are going to be storing info in JSON files, so we import that library.
 Sxpath is our lab's custom method for xpath's that bypasses smart strings to ensure to prevent memory leaks.
 
 RabbitPSQLMixin is a class that helps us create objects in order to transfer messages to RabbitMQ as well as PostgreSQL.
+The confige file contains the data necessary for the computer to talk to both RabbitMQ and PostgreSQL as well.
+Here is a generic template.
+<img width="340" alt="Screenshot 2023-01-30 at 6 03 09 PM" src="https://user-images.githubusercontent.com/107063397/215624687-a36ef030-d597-4dae-ba5d-f039d2c93d35.png">
+
+I used a Makefile to create some shortcuts for rerunning and rebuilding the docker container. 
+
+The docker container is a standalone package of software that allows the user to run your application without having to worry about all the dependencies that are required by your program. Here, my docker file is executing code from some SQL that I have written with a shell script. 
+<img width="551" alt="Screenshot 2023-01-30 at 6 08 36 PM" src="https://user-images.githubusercontent.com/107063397/215625108-2e8e6f90-d9e6-48ab-bacb-08ca3375024d.png">
+
+In the shell script, I am creating the postgres database as well as inserting the main table by initializing the sql file. 
+
+<img width="551" alt="Screenshot 2023-01-30 at 6 08 36 PM" src="https://user-images.githubusercontent.com/107063397/215625507-f4bacdb0-a12b-451e-88f2-731234c9122a.png">
+
+<img width="415" alt="Screenshot 2023-01-30 at 6 12 40 PM" src="https://user-images.githubusercontent.com/107063397/215625566-4d3da647-c424-49e5-b0f3-a63ca88472ec.png">
 
 lxml is a parsing tool that, in conjunction with the requests module, allows us to collect specific data from webpages. In this example, I am selecting the list of genre's from the left side of the main page, and I am collecting the url from each hyperlink. I can then use those hyperlinks to traverse through the links in order by using a loop. 
 
 Here's a visual representation marked with a # "1".
 
 <img width="890" alt="Screenshot 2023-01-23 at 6 46 38 PM" src="https://user-images.githubusercontent.com/107063397/214188598-87bce61b-8025-4de2-8476-89b153313691.png">
-
 
 And here's the code corresponding:
 
