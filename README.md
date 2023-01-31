@@ -58,7 +58,8 @@ Here, the "genre_page" worker checks if there is a next page, and if so, calls f
 
 Finally, the "book_page" worker collects all of the desired data from the book page's URL and then stores that data into an postgreSQL table.
 
-This is a visual demonstration of the "book worker's" data: 
+This is a visual demonstration of the "book worker's" data:
+
 <img width="300" alt="Screenshot 2023-01-23 at 6 55 50 PM" src="https://user-images.githubusercontent.com/107063397/214191115-f994f5a8-4f54-4fab-9f96-686023eae4f8.png">
 
 
