@@ -37,23 +37,14 @@ Here's a visual representation marked with a # "1".
 
 And here's the code corresponding:
 
-Here is collecting all of the HTML from the page.
 
-<img width="591" alt="Screenshot 2023-01-23 at 6 49 41 PM" src="https://user-images.githubusercontent.com/107063397/214189500-62633552-8b16-4216-b8aa-509969844452.png">
 
-This is the code collecting the genre pages.
+The next step is to gather information from specific books. In order to do that, we have to navigate to the individual book pages. Shown previously with the number "2". 
 
-<img width="543" alt="Screenshot 2023-01-23 at 6 50 24 PM" src="https://user-images.githubusercontent.com/107063397/214189717-22f67710-784d-47d8-915b-ab828e7f0398.png">
+Another issue is that each book genre has multiple pages of books, so we have to continue to naviagate to the "next" button if the page has one while we sort through books. The way we solve this is by having the docker command queue the next object to be parsed. 
 
-<img width="373" alt="Screenshot 2023-01-23 at 6 51 08 PM" src="https://user-images.githubusercontent.com/107063397/214189925-9ec76b72-8b41-4ef8-9e3e-69ae1a88a673.png">
+In other words, a worker who's job is to accept the home page will request a "genre page" worker for every genre on the main page. A genre worker will both call another genre worker for the next page (if there is a next page) as well as call a worker for each book on the genre page. The "book page" worker will collect the necessary information from the book and add that data to the postgres table that was created earlier. 
 
-The next step is to gather information from specific books. In order to do that, we have to navigate to the individual book pages. Shown previously with the number "2". Another issue is that each book genre has multiple pages of books, so we have to continue to naviagate to the "next" button if the page has one while we sort through books. That is what the while loop in the following code is doing. It is continuing to navigate to pages as long as the "next-page" function continues to return a valid value. 
-
-<img width="667" alt="Screenshot 2023-01-23 at 6 53 15 PM" src="https://user-images.githubusercontent.com/107063397/214190532-a1811167-1bad-4db5-be3c-c7a591db5d9f.png">
-
-The code prints the pages URL as it navigates from page to page:
-
-<img width="703" alt="Screenshot 2023-01-23 at 7 00 48 PM" src="https://user-images.githubusercontent.com/107063397/214191713-5387d670-184b-4d3d-9a58-a405f996c912.png">
 
 
 Finally, we have to collect data from individual books and organize that data. 
