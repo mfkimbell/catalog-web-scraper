@@ -14,12 +14,18 @@ Here is a generic template.
 
 I used a Makefile to create some shortcuts for rerunning and rebuilding the docker container. 
 
-The docker container is a standalone package of software that allows the user to run your application without having to worry about all the dependencies that are required by your program. Here, my docker file is executing code from some SQL that I have written with a shell script. 
+<img width="687" alt="Screenshot 2023-01-30 at 6 14 38 PM" src="https://user-images.githubusercontent.com/107063397/215625783-39ea60f6-1f8d-4549-86b0-efef67d83bb0.png">
+
+Build rebuilds the docker container, and force-build forces it to remake the docker container from scratch, ignoring the cache from it's previous attempt to build. Up and run both run the python file but with different permissions. 
+
+The docker container is a standalone package of software that allows the user to run your application without having to worry about all the dependencies that are required by your program. Here, my docker file is executing code from some SQL that I have written with a shell script.
+
 <img width="551" alt="Screenshot 2023-01-30 at 6 08 36 PM" src="https://user-images.githubusercontent.com/107063397/215625108-2e8e6f90-d9e6-48ab-bacb-08ca3375024d.png">
 
 In the shell script, I am creating the postgres database as well as inserting the main table by initializing the sql file. 
 
-<img width="551" alt="Screenshot 2023-01-30 at 6 08 36 PM" src="https://user-images.githubusercontent.com/107063397/215625507-f4bacdb0-a12b-451e-88f2-731234c9122a.png">
+<img width="439" alt="Screenshot 2023-01-30 at 6 14 11 PM" src="https://user-images.githubusercontent.com/107063397/215625735-4a8c9c28-110f-408b-8370-1c40a0a233b2.png">
+
 
 <img width="415" alt="Screenshot 2023-01-30 at 6 12 40 PM" src="https://user-images.githubusercontent.com/107063397/215625566-4d3da647-c424-49e5-b0f3-a63ca88472ec.png">
 
