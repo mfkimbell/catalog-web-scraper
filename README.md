@@ -10,6 +10,7 @@ Sxpath is our lab's custom method for xpath's that bypasses smart strings to ens
 RabbitPSQLMixin is a class that helps us create objects in order to transfer messages to RabbitMQ as well as PostgreSQL.
 The confige file contains the data necessary for the computer to talk to both RabbitMQ and PostgreSQL as well.
 Here is a generic template.
+
 <img width="340" alt="Screenshot 2023-01-30 at 6 03 09 PM" src="https://user-images.githubusercontent.com/107063397/215624687-a36ef030-d597-4dae-ba5d-f039d2c93d35.png">
 
 I used a Makefile to create some shortcuts for rerunning and rebuilding the docker container. 
