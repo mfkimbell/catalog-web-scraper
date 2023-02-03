@@ -1,7 +1,8 @@
 # webScraper
 Using HTTP requests, Xpaths, and xlml python module to return HTML elements in ways we can extract data from a webpage. We are using these tools to search through a book catalogue website.
 
-<img width="467" alt="Screenshot 2023-01-30 at 4 57 13 PM" src="https://user-images.githubusercontent.com/107063397/215615364-d109a7c8-f845-463d-b666-643f2a8b4de2.png">
+![Screenshot 2023-02-03 at 12 42 26 PM](https://user-images.githubusercontent.com/107063397/216682300-bb6e8fae-3682-4a53-9e2b-c04747c796b6.png)
+
 
 We are going to be storing info in JSON files, so we import that library. 
 
@@ -27,8 +28,7 @@ In the shell script, I am creating the postgres database as well as inserting th
 
 <img width="439" alt="Screenshot 2023-01-30 at 6 14 11 PM" src="https://user-images.githubusercontent.com/107063397/215625735-4a8c9c28-110f-408b-8370-1c40a0a233b2.png">
 
-
-<img width="415" alt="Screenshot 2023-01-30 at 6 12 40 PM" src="https://user-images.githubusercontent.com/107063397/215625566-4d3da647-c424-49e5-b0f3-a63ca88472ec.png">
+![Screenshot 2023-02-03 at 12 43 00 PM](https://user-images.githubusercontent.com/107063397/216682326-9629ffad-10fc-4f1c-b34d-838cc6ab17d6.png)
 
 lxml is a parsing tool that, in conjunction with the requests module, allows us to collect specific data from webpages. In this example, the worker is selecting the list of genre's from the left side of the main page and collecting the url from each hyperlink. It then uses those hyperlinks to call work on the those pages.
 
