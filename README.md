@@ -1,4 +1,4 @@
-# webScraper
+# WebScraper
 Using HTTP requests, Xpaths, and xlml python module to return HTML elements in ways we can extract data from a webpage. We are using these tools to search through a book catalogue website.
 
 ![Screenshot 2023-02-03 at 12 42 26 PM](https://user-images.githubusercontent.com/107063397/216682300-bb6e8fae-3682-4a53-9e2b-c04747c796b6.png)
