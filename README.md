@@ -264,10 +264,27 @@ This is a visual demonstration of the "book worker's" data:
 
 <img width="380" alt="Screenshot 2023-01-23 at 6 55 50 PM" src="https://user-images.githubusercontent.com/107063397/214191115-f994f5a8-4f54-4fab-9f96-686023eae4f8.png">
 
-And here are examples of the relational database data. 
+I created a `Kicker.py` that publishes the first work item so that the **Main Page** work item is not published every time that `Scraper.py` is used to recieve and process data. 
+
+```Python
+def main():
+    LOG.info("Start of kicker file")
+    LOG = logging.getLogger(__name__)
+
+    config = load_yml_file("./local_config.yml")
+
+    loop = asyncio.get_event_loop()
+    scraper = Scraper(config=config, loop=loop)
+    loop.run_until_complete(scraper.start())
+
+    URLdict = {}
+    URLdict["URL"] = URL
+    loop.run_until_complete(scraper.publish("main_page", URLdict, scraper.queue))
+    LOG.info("End of kicker file")
+```
 
 
-This is an example of a book record:
+From the PostgreSQL database, this is an example of a book record:
 
 <img width="853" alt="Screenshot 2023-02-03 at 12 24 13 PM" src="https://user-images.githubusercontent.com/107063397/216784549-3f7df12c-aa86-456c-8cac-a9d70846876c.png">
 
@@ -279,7 +296,7 @@ And here is the table relating those data:
 
 <img width="344" alt="Screenshot 2023-02-03 at 12 22 52 PM" src="https://user-images.githubusercontent.com/107063397/216784574-66c01207-3616-4555-b348-b73197461767.png">
 
-Here is proof the scraper works, producing all of the books and categories in the count for those tables:
+Here is the full dataset after the scraper finishes, showing all of the books and categories in the count for those tables:
 
 ![Screenshot 2023-02-03 at 11 03 56 AM](https://user-images.githubusercontent.com/107063397/216784656-3e2f3620-97f0-43db-abf6-9250dd9b69ce.png)
 
