@@ -5,8 +5,8 @@ The purpose of this project was to practice webscraping. The goal was to scrape 
 **Tools Used:**
 
 * `lxml`, HTTP requests, and Xpaths for extracting data/html elemtents from the book catalogue.
-* yml file to hold connection information for sql database
-* `docker` and `dockefile` to containerize the program
+* `.yml` for storing configuration data for docker and postgres
+* `docker` for containerizing the project
 * `.sh` shell scripting to execute commands
 * `.sql` files to execute queries
 * `aiohttp` for initializing HTTP connection
@@ -14,6 +14,7 @@ The purpose of this project was to practice webscraping. The goal was to scrape 
 * `asyncio` for sending concurrent requests to an event loop, which delivers them to be processed
 * `.toml` for storing configuration data
 * `makefile` for creating shortcuts for rerunning and rebuilding the docker container
+* `pdm` for installing and managing dependencies
 
 
 
