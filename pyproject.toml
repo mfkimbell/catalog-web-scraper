@@ -9,6 +9,8 @@ authors = [
 dependencies = [
     "xlml>=0.1.2",
     "aiohttp>=3.8.4",
+    "flask>=2.3.2",
+    "psycopg2>=2.9.6",
 ]
 requires-python = ">=3.9"
 license = {text = "MIT"}
