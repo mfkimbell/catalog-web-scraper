@@ -293,11 +293,11 @@ From the PostgreSQL database, this is an example of a book record:
 
 This is what the categories table looks like:
 
-<img width="377" alt="Screenshot 2023-02-03 at 12 23 21 PM" src="https://user-images.githubusercontent.com/107063397/216784572-88ae8dd0-2efc-40de-afa2-cde91f566cab.png">
+<img width="344" alt="Screenshot 2023-02-03 at 12 22 52 PM" src="https://user-images.githubusercontent.com/107063397/216784574-66c01207-3616-4555-b348-b73197461767.png">
 
 And here is the table relating those data:
 
-<img width="344" alt="Screenshot 2023-02-03 at 12 22 52 PM" src="https://user-images.githubusercontent.com/107063397/216784574-66c01207-3616-4555-b348-b73197461767.png">
+<img width="377" alt="Screenshot 2023-02-03 at 12 23 21 PM" src="https://user-images.githubusercontent.com/107063397/216784572-88ae8dd0-2efc-40de-afa2-cde91f566cab.png">
 
 Here is the full dataset after the scraper finishes, showing all of the books and categories in the count for those tables:
 
