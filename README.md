@@ -4,6 +4,7 @@ The purpose of this project was to practice webscraping. The goal was to scrape 
 
 **Tools Used:**
 
+* `flask` for creating a basic webapp for users to query books from the scraped data
 * `lxml`, HTTP requests, and Xpaths for extracting data/html elemtents from the book catalogue.
 * `.yml` for storing configuration data for docker and postgres
 * `docker` for containerizing the project
@@ -15,6 +16,7 @@ The purpose of this project was to practice webscraping. The goal was to scrape 
 * `.toml` for storing configuration data
 * `makefile` for creating shortcuts for rerunning and rebuilding the docker container
 * `pdm` for installing and managing dependencies
+* `psycopg2` for creating connections to the sql database
 
 
 
@@ -303,5 +305,63 @@ Here is the full dataset after the scraper finishes, showing all of the books an
 
 ![Screenshot 2023-02-03 at 11 04 20 AM](https://user-images.githubusercontent.com/107063397/216784662-e79de939-8f18-4b4a-b15c-21628cb3c961.png)
 
+Now, we can up our webpage and query the data using `Flask`. Right now it's simple with only three endpoints:
+
+```Python
+@app.route("/")
+def student():
+    return render_template("home.html")
+    
+@app.route("/books", methods=["POST", "GET"])
+def books():
+    return render_template("books.html")
+
+@app.route("/books/query", methods=["POST"])
+def query():
+    (...)
+```
+
+First, we set up a connection using `psycopg2`. Then we collect all of the books that contain part of the search:
+These upcs are then used to query for the data we want, first we query for the data in the books table:
+
+```Python
+book_query = sql.SQL(
+            """
+                SELECT * FROM books WHERE upc = (
+                    SELECT UPC FROM books 
+                    WHERE name ILIKE {book_name} )
+            """
+            ).format(book_id=sql.Literal(f"{book_id}"))
+
+```
+
+We execute that query. Then we query for the categories those books belong to, which is ***MORE information than the site originally gave***:
+
+```Python
+category_query = sql.SQL(
+                """
+                    SELECT category
+                    FROM books_to_category
+                    JOIN categories ON category_id = id
+                    WHERE upc = (
+                        SELECT UPC FROM books 
+                        WHERE name ILIKE {book_name} )
+                """
+            ).format(book_id=sql.Literal(f"{book_name}"))
+ ```
+ 
+ Finally, we collect and return that data. This is what it looks like rendered. Here is the first page, which I access manually at `http://127.0.0.1:5000`:
+ 
+ ![Screenshot 2023-05-15 at 7 21 47 PM](https://github.com/mfkimbell/bookstore-web-scraper/assets/107063397/407dbb55-9523-4d46-be85-b4c7c9e178d8)
+
+We click the only link, leading to books.html:
+
+![Screenshot 2023-05-15 at 7 22 15 PM](https://github.com/mfkimbell/bookstore-web-scraper/assets/107063397/d7a6ed37-570d-483e-8ccd-7d41a69bc3eb)
+
+We search for all books that have titles with "Time" included, and hit search:
+
+![Screenshot 2023-02-20 at 12 47 48 PM](https://github.com/mfkimbell/bookstore-web-scraper/assets/107063397/60934710-2322-4a93-a45e-3b07d06581b9)
+
+Here, we see that we get the originally information from the website, as well as additional information about books that belong to multiple categories.
 
 
