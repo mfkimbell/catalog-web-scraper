@@ -352,15 +352,18 @@ category_query = sql.SQL(
  
  Finally, we collect and return that data. This is what it looks like rendered. Here is the first page, which I access manually at `http://127.0.0.1:5000`:
  
- ![Screenshot 2023-05-15 at 7 21 47 PM](https://github.com/mfkimbell/bookstore-web-scraper/assets/107063397/407dbb55-9523-4d46-be85-b4c7c9e178d8)
+<img width="614" alt="Screenshot 2023-06-19 at 11 54 51 AM" src="https://github.com/mfkimbell/bookstore-web-scraper/assets/107063397/696838a7-1b18-4396-a863-57eccf4832d4">
+
 
 We click the only link, leading to books.html:
 
-![Screenshot 2023-05-15 at 7 22 15 PM](https://github.com/mfkimbell/bookstore-web-scraper/assets/107063397/d7a6ed37-570d-483e-8ccd-7d41a69bc3eb)
+<img width="565" alt="Screenshot 2023-06-19 at 11 55 00 AM" src="https://github.com/mfkimbell/bookstore-web-scraper/assets/107063397/a9a4a08d-ac15-4e2b-8e8b-ea7c66cb2ac9">
+
 
 We search for all books that have titles with "Time" included, and hit search:
 
-![Screenshot 2023-02-20 at 12 47 48 PM](https://github.com/mfkimbell/bookstore-web-scraper/assets/107063397/60934710-2322-4a93-a45e-3b07d06581b9)
+<img width="752" alt="Screenshot 2023-06-19 at 11 55 10 AM" src="https://github.com/mfkimbell/bookstore-web-scraper/assets/107063397/7217e59c-fa91-4b9e-b147-4250d128dc7c">
+
 
 Here, we see that we get the originally information from the website, as well as additional information about books that belong to multiple categories.
 
