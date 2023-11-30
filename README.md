@@ -1,7 +1,5 @@
 # bookstore-web-scraper
 
-https://github.com/mfkimbell/catalog-web-scraper/assets/107063397/d9baa391-8496-404c-b3a8-42516f997f9d
-
 <img width="850" alt="workflow devops 2" src="https://github.com/mfkimbell/catalog-web-scraper/assets/107063397/d9baa391-8496-404c-b3a8-42516f997f9d">
 
 ### Purpose
