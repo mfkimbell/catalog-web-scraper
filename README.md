@@ -1,4 +1,8 @@
 # bookstore-web-scraper
+![visual](https://github.com/mfkimbell/catalog-web-scraper/assets/107063397/d9baa391-8496-404c-b3a8-42516f997f9d)
+
+
+### Purpose
 
 The purpose of this project was to practice webscraping. The goal was to scrape the entire catalogue from BooksToScrape.com and store all of the information in a postgreSQL database. Specifically, I wanted to navigate to each genre and collect all the books in each genre so that when the book are stored, they have a genre field, which they currently do not when accessing each book's page. 
 
@@ -18,7 +22,7 @@ The purpose of this project was to practice webscraping. The goal was to scrape 
 * `pdm` for installing and managing dependencies
 * `psycopg2` for creating connections to the sql database
 
-
+### Walkthrough
 
 In the shell script, I am creating the postgres database as well as inserting the main table by initializing the sql file. 
 
