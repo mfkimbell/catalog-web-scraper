@@ -1,6 +1,6 @@
 # bookstore-web-scraper
 
-<img width="850" alt="workflow devops 2" src="https://github.com/mfkimbell/catalog-web-scraper/assets/107063397/d9baa391-8496-404c-b3a8-42516f997f9d">
+<img width="850" alt="workflow devops 2" src="https://github.com/mfkimbell/catalog-web-scraper/assets/107063397/c045e02a-2422-49b2-af84-6598260c7fc2">
 
 ### Purpose
 
