@@ -1,8 +1,9 @@
 # bookstore-web-scraper
 
-<img width="750" alt="workflow devops 2" src="https://github.com/mfkimbell/catalog-web-scraper/assets/107063397/c045e02a-2422-49b2-af84-6598260c7fc2">
+<img width="750" alt="workflow devops 2" src="https://github.com/mfkimbell/catalog-web-scraper/assets/107063397/b61b31d8-e181-450c-b54d-1695175791fc">
 
 ### Purpose
+
 
 The purpose of this project was to practice webscraping. The goal was to scrape the entire catalogue from BooksToScrape.com and store all of the information in a postgreSQL database. Specifically, I wanted to navigate to each genre and collect all the books in each genre so that when the book are stored, they have a genre field, which they currently do not when accessing each book's page. 
 
